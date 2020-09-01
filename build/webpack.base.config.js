@@ -1,13 +1,16 @@
+const path = require('path');
 const wepackbase = require('./webpack.config');
 const { merge } = require('webpack-merge');
 const pug = require('../webpack/pug');
 const babel = require('../webpack/babel-loader');
-//const fileloader = require('../webpack/fileloader');
+const fileloader = require('../webpack/fileloader');
 const css = require('../webpack/css-loader');
+const ts = require('../webpack/ts-loader');
 
 module.exports = merge(
   wepackbase(),
   pug(),
+  ts(),
   babel(),
   //fileloader(),
   css(),

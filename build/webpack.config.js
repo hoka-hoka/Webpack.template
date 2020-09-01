@@ -3,7 +3,7 @@ const paths = require('./webpack.paths.config');
 var webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin'); // для копирования файлов при build
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // создаёт автоматически index.html, может
-//const jquery = require('jquery');
+
 
 const PAGES_DIR = `${paths.PATHS.src}/pug/pages/`;
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
@@ -66,7 +66,8 @@ module.exports = function(){
 // идентификатор и сам модуль. Парсер webpack esprima, встретив идентификатор, сгенерирует код
 // загрузки этого модуля.
         $: 'jquery',
-        jQuery: 'jquery'
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
       })
     ]
   }
