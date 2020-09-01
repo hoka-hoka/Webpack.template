@@ -1,0 +1,23 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  title #{title}
+body(id=title)
+  each temp in templates
+    case temp
+      when "header"
+        include ../includes/header
+      when "footer"
+        include ../includes/footer
+      when "sprite"
+        include ../../assets/img/svg/sprite.svg
+
+
+
+
+

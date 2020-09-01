@@ -1,4 +1,6 @@
-extends ../layout/header
-block variable
-	- var title = 'Pug'
-	
+extends ../layout/main
+
+block variables
+  - var templates = ["header", "footer", "sprite"];
+  - var title = 'index';
+//-   - var footerItem = [["О нас", "Новости", "Служба поддрежки", "Услуги"], ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"], ["Соглашения", "Сообщества", "Связь с нами"], "Получите специальное предложение и новости сервиса"];
